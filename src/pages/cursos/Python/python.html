@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/src/styles/common-styles/global.css">
+        <link rel="stylesheet" href="/src/styles/python/python-course.css">
+        <link rel="icon" href="/public/assets/img/logo/favicon.ico" type="image/x-icon">
+        <title>Distrito23</title>
+    </head>    
+    <body>
+    <div class="div-body">
+        <header>
+            <nav>
+                <div class="nav-container">
+                    <div class="nav-left">
+                        <img src="/public/assets/img/logo/logo.png" alt="Distrito23 Logo" class="logo">
+                        <a href="/index.html">Distrito 23</a>
+                               <!-- ========== MENÚ CON DROPDOWNS ========== -->
+                        <ul class="nav-links">
+                            <!-- Learn -->
+                            <li>
+                                <a href="#learn" class="has-dropdown">Learn</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="/src/pages/cursos/Python/python.html">Python</a></li>
+                                </ul>
+                            </li>
+                            
+                            <!-- Recursos -->
+                            <li>
+                                <a href="#recursos" class="has-dropdown">Recursos</a>
+                            </li>
+                            
+                            <!-- Retos -->
+                            <li>
+                                <a href="#retos" class="has-dropdown">Retos</a>
+                            </li>
+                            
+                            <!-- Proyectos -->
+                            <li>
+                                <a href="#proyectos" class="has-dropdown">Proyectos</a>
+                            </li>
+                            
+                            <!-- Comunidad -->
+                            <li>
+                                <a href="#comunidad" class="has-dropdown">Comunidad</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="nav-right">
+                      <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+                            <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="5"></circle>
+                                <line x1="12" y1="1" x2="12" y2="3"></line>
+                                <line x1="12" y1="21" x2="12" y2="23"></line>
+                                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                <line x1="1" y1="12" x2="3" y2="12"></line>
+                                <line x1="21" y1="12" x2="23" y2="12"></line>
+                                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                            </svg>
+                            <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                            </svg>
+                        </button>
+                        <button class="search-btn">
+                            <div class="search-icon"></div>
+                            <span>Buscar</span>
+                        </button>
+                        <a href="/src/pages/auth/login.html" class="login-btn">Iniciar Sesión/perfil</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Main Content -->
+        <main>
+            <section class="curso-python">
+                <div class="div-curso-python">
+                    <div class="course-badge">
+                        <span class="badge-level">PRINCIPIANTE</span>
+                        <span class="badge-type">CURSO</span>
+                    </div>
+                    <h2>Python</h2>
+                    <p>
+                        Aprende Python, uno de los lenguajes de programación más populares y versátiles del mundo, 
+                        desde conceptos básicos hasta avanzados, este curso te guiará a través de ejercicios prácticos
+                    </p>
+                    <a href="/src/pages/auth/login.html"><button class="start-python-course">Start Learning for Free</button></a>
+                </div>
+            </section>
+
+            <section class="python-world">
+                <div class="div-python-world">
+                    <div class="python-modules">
+                        <div class="module-card expanded">
+                            <div class="module-header">
+                                <span class="module-number">1</span>
+                                <h3 class="module-title">Hello World</h3>
+                                <button class="toggle-btn" aria-label="Toggle module">▼</button>
+                            </div>
+                            <div class="module-content">
+                                <p class="module-description">Aprende a escribir tus primeras líneas de código en Python.</p>
+                                <div class="python-levels">
+                                    <div class="hello-world exercise-item">
+                                        <div class="exercise-info">
+                                            <p class="exercise-label">Exercise 1</p>
+                                            <p class="exercise-name">Hello World</p>
+                                        </div>
+                                        <button class="start-excercise1 exercise-btn start" 
+                                            onclick="window.location.href='/src/pages/cursos/Python/ejercicios/hello-world-py.html'">
+                                                Start
+                                        </button>
+                                    </div>
+                                    <div class="pattern exercise-item">
+                                        <div class="exercise-info">
+                                            <p class="exercise-label">More excercise</p>
+                                            <p class="exercise-name">In Progress</p>
+                                        </div>
+                                        <button class="start-excercise3 exercise-btn locked">???</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="module-card">
+                            <div class="module-header">
+                                <span class="module-number">2</span>
+                                <h3 class="module-title">In Progress</h3>
+                                <button class="toggle-btn" aria-label="Toggle module">▼</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="python-sidebar">
+                        <div class="profile-card">
+                            <div class="profile-header">
+                                <img src="/public/assets/img/gif 1.gif" 
+                                     alt="Profile Avatar" 
+                                     class="profile-avatar profile-avatar-animated"
+                                     id="profileAvatar">
+                                <div class="profile-info">
+                                    <h4 class="profile-name">Subject 1</h4>
+                                    <span class="profile-level">Level 1</span>
+                                </div>
+                            </div>
+                            <button class="yourprofile-link profile-btn">View Profile <br> Not fot Now</button>
+                        </div>
+
+                        <div class="progress-card">
+                            <h4 class="card-title">Course Progress</h4>
+                            <div class="progress-item">
+                                <div class="progress-label">
+                                    <span>Exercises</span>
+                                    <span class="progress-count">0 / 1</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill blue" style="width: 0%"></div>
+                                </div>
+                            </div>
+                            <div class="progress-item">
+                                <div class="progress-label">
+                                    <span>XP Earned</span>
+                                    <span class="progress-count">0 / 5</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill yellow" style="width: 0%"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="badges-card">
+                            <h4 class="card-title">Course Badges <span class="badge-count">0 / 1</span></h4>
+                            <p class="badges-description">Completa un capítulo para tener un insignia. Coleccionalas todas!</p>
+                            <div class="badges-grid">
+                                <div class="badge-item locked"></div>
+                            </div>
+                        </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="div-footer">
+                <article class="company-links">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                    </ul>
+                </article>
+
+                <article class="practices-links">
+                    <h3>Practice</h3>
+                    <ul>
+                        <li><a href="#challenges">Challenges</a></li>
+                        <li><a href="#projet">project</a></li>
+                    </ul>
+                </article>
+
+                <article class="learn-link">
+                    <h3>Learn</h3>
+                    <ul>
+                        <li><a href="/src/pages/cursos/Python/python.html">Python</a></li>
+                    </ul>
+                </article>
+                
+                <article class="rs-links">
+                    <h3>Social Nets</h3>
+                    <ul>
+                        <li>
+                            <a href="https://www.instagram.com/substance4moe/" aria-label="Instagram">
+                                <img src="/public/assets/img/brands/instagram-brands-solid-full.svg" alt="Instagram Logo">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/BlowingFever" aria-label="GitHub">
+                                <img src="/public/assets/img/brands/github.png" alt="GitHub Logo">
+                            </a>
+                        </li>
+                        <li><a href="https://www.linkedin.com/in/moisés-cuartero-collado-954776392" aria-label="Linkedin">
+                                <img src="/public/assets/img/brands/linkedin.png" alt="Linkedin Logo">
+                            </a>
+                        </li>
+                    </ul>
+                </article>
+
+                <p>
+                    Made with &hearts; by Moisés Cuartero Collado
+                </p>
+                <p>
+                    &copy; 2025 Distrito23
+                </p>
+            </div>
+        </footer>
+    </div> 
+    <script src="/src/js/py-excercyse.js"></script>
+    <script src="/src/js/dropdown-movil.js"></script>
+    <script src="/src/js/dropdown-movil.js"></script>
+    <script src="/src/js/toggle-elements.js"></script>
+    <script src="/src/js/toggle-module.js"></script>
+    </body>
+</html>

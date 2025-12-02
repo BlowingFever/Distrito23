@@ -1,0 +1,174 @@
+/* ===== FOOTER ===== */
+footer {
+    background: var(--color-footer-bg);
+    color: var(--color-text);
+    padding: var(--spacing-md) var(--spacing-sm) var(--spacing-sm);
+    margin-top: 0 auto;
+    margin-bottom: 0 auto;
+}
+
+.div-footer {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-md);
+    padding-bottom: var(--spacing-sm);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Artículos del footer */
+.company-links,
+.practices-links,
+.learn-link,
+.rs-links {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+}
+
+.company-links h3,
+.practices-links h3,
+.learn-link h3,
+.rs-links h3 {
+    font-size: var(--font-size-ms);
+    font-weight: 700;
+    color: var(--color-tittle);
+    margin-bottom: var(--spacing-xs);
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+}
+
+.company-links ul,
+.practices-links ul,
+.learn-link ul,
+.rs-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0;
+}
+
+.company-links ul li,
+.practices-links ul li,
+.learn-link ul li,
+.rs-links ul li {
+    margin: 0;
+}
+
+.company-links a,
+.practices-links a,
+.learn-link a,
+.rs-links a {
+    color: var(--text-footer);
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    display: inline-block;
+}
+
+.company-links a,
+.practices-links a{
+    cursor: not-allowed;
+}
+
+.company-links a:hover,
+.practices-links a:hover,
+.learn-link a:hover,
+.rs-links a:hover {
+    color: var(--color-links-footer);
+    transform: translateX(4px);
+}
+
+/* Copyright  + Made With Love*/
+.div-footer > p {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: var(--color-text);
+    font-size: var(--font-size-sm);
+    margin-top: 10px;
+}
+.div-footer p + p{
+    margin-top: -20px;
+}
+
+/* Estilos específicos para redes sociales */
+.rs-links ul {
+    flex-direction: row;
+    gap: var(--spacing-sm);
+}
+
+.rs-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: var(--footer-link-hover);
+    border-radius: var(--radius-sm);
+    transition: all 0.2s ease;
+    overflow: hidden;
+}
+
+.rs-links a:hover {
+    transform: translateY(-3px);
+}
+
+/* Imágenes/iconos en redes sociales */
+.rs-links a img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+    transition: filter 0.2s ease;
+}
+
+.rs-links a:hover img {
+    filter: brightness(0) invert(1) opacity(0.8);
+}
+
+[data-theme="light"] .rs-links a img {
+    filter: brightness(0) invert(1);
+}
+
+[data-theme="dark"] .rs-links a img {
+    filter: brightness(0) invert(1) opacity(0.9);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    footer {
+        padding: var(--spacing-sm) var(--spacing-sm) var(--spacing-sm);
+    }
+    
+    .div-footer {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-sm);
+    }
+    
+    .rs-links {
+        grid-column: 2n / -1;
+    }
+}
+
+@media (max-width: 480px) {
+    .div-footer {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-sm);
+    }
+    
+    .company-links,
+    .practices-links,
+    .learn-link,
+    .rs-links {
+        text-align: center;
+    }
+    
+    .rs-links ul {
+        justify-content: center;
+    }
+}

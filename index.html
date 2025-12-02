@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/src/styles/common-styles/global.css">
+        <link rel="stylesheet" href="/src/styles/common-styles/main.css">
+        <link rel="icon" href="/public/assets/img/logo/favicon.ico" type="image/x-icon">
+        <title>Distrito23</title>
+    </head>    
+    <body>
+    <div class="div-body">
+        <header>
+            <nav>
+                <div class="nav-container">
+                    <div class="nav-left">
+                        <img src="/public/assets/img/logo/logo.png" alt="Distrito23 Logo" class="logo">
+                        <a href="/public/index.html">Distrito 23</a>
+                               <!-- ========== MENÚ CON DROPDOWNS ========== -->
+                        <ul class="nav-links">
+                            <!-- Learn -->
+                            <li>
+                                <a href="#learn" class="has-dropdown">Learn</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="/src/pages/cursos/Python/python.html">Python</a></li>
+                                </ul>
+                            </li>
+                            
+                            <!-- Recursos -->
+                            <li>
+                                <a href="#recursos" class="has-dropdown">Recursos</a>
+                            </li>
+                            
+                            <!-- Retos -->
+                            <li>
+                                <a href="#retos" class="has-dropdown">Retos</a>
+                            </li>
+                            
+                            <!-- Proyectos -->
+                            <li>
+                                <a href="#proyectos" class="has-dropdown">Proyectos</a>
+                            </li>
+                            
+                            <!-- Comunidad -->
+                            <li>
+                                <a href="#comunidad" class="has-dropdown">Comunidad</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="nav-right">
+                      <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+                            <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="5"></circle>
+                                <line x1="12" y1="1" x2="12" y2="3"></line>
+                                <line x1="12" y1="21" x2="12" y2="23"></line>
+                                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                <line x1="1" y1="12" x2="3" y2="12"></line>
+                                <line x1="21" y1="12" x2="23" y2="12"></line>
+                                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                            </svg>
+                            <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                            </svg>
+                        </button>
+                        <button class="search-btn">
+                            <div class="search-icon"></div>
+                            <span>Buscar</span>
+                        </button>
+                        <a href="/src/pages/auth/login.html" class="login-btn">Iniciar Sesión/perfil</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <section class="main-start">
+                <div class="divm-start">
+                    <h2>Start coding with Distrito23</h2>
+                    <h2>
+                        <span class="typing-text" id="typingText"></span>
+                    </h2>
+                    <a href="/src/pages/auth/login.html">
+                    <button class="get-startes">
+                        Start
+                    </button>
+                    </a>
+                </div>
+            </section>
+
+            <section class="lenguajes">
+                <a href="/src/pages/cursos/Python/python.html">
+                <article class="lenguaje1">
+                    <div class="len-python">
+                            Python
+                    </div>
+                </article>
+                </a>
+                <a href="#html">
+                <article class="lenguaje2">
+                    <div class="len-html">
+                        HTML
+                    </div>
+                </article>
+                </a>
+            </section>
+
+            <section class="caracteristicas">
+                <h1>¿Que ofrecemos?</h1>
+                <article class="caracteristica1">
+                    <div class="div-lvlup">
+                        <p>1</p>
+                    </div>
+                    Sistema de progreso y recompensas: niveles, logros y 
+                    puntos de experiencia que se van desbloqueando
+                    al completar lecciones o retos.
+                </article>
+
+                <article class="caracteristica2">
+                    <div class="div-portfolio">
+                        <p>2</p>
+                    </div>
+                    Rutas guiadas con niveles desde lo más básico hasta proyectos más complejos,
+                    todo esto de forma estructurada y progresiva, con guías para que no te pierdas
+                    en ningun momento.
+                </article>
+            </section>
+
+            <section class="opiniones">
+                    <h1>Opiniones</h1>
+                <div class="div-opiniones">
+                    <article class="op1">
+                        <div class="div-op1">
+                            <h2>Únete a nuestra comunidad</h2>
+                        </div>
+                    </article>
+
+                    <article class="op2">
+                        <div class="div-op2">
+                            <h2>Lo que dicen nuestros usuarios</h2>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="div-footer">
+                <article class="company-links">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                    </ul>
+                </article>
+
+                <article class="practices-links">
+                    <h3>Practice</h3>
+                    <ul>
+                        <li><a href="#challenges">Challenges</a></li>
+                        <li><a href="#Projects">project</a></li>
+                    </ul>
+                </article>
+
+                <article class="learn-link">
+                    <h3>Learn</h3>
+                    <ul>
+                        <li><a href="/src/pages/cursos/Python/python.html">Python</a></li>
+                    </ul>
+                </article>
+                
+                <article class="rs-links">
+                    <h3>Social Nets</h3>
+                    <ul>
+                        <li>
+                            <a href="https://www.instagram.com/substance4moe/" aria-label="Instagram">
+                                <img src="/public/assets/img/brands/instagram-brands-solid-full.svg" alt="Instagram Logo">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/BlowingFever" aria-label="GitHub">
+                                <img src="/public/assets/img/brands/github.png" alt="GitHub Logo">
+                            </a>
+                        </li>
+                        <li><a href="https://www.linkedin.com/in/moisés-cuartero-collado-954776392" aria-label="Linkedin">
+                                <img src="/public/assets/img/brands/linkedin.png" alt="Linkedin Logo">
+                            </a>
+                        </li>
+                    </ul>
+                </article>
+
+                <p>
+                    Made with &hearts; by Moisés Cuartero Collado
+                </p>
+                <p>
+                    &copy; 2025 Distrito23
+                </p>
+            </div>
+        </footer>
+    </div>
+    <script src="/src/js/toggle-elements.js"></script>
+    <script src="/src/js/write-machine.js"></script>
+    <script src="/src/js/dropdown-movil.js"></script>
+    </body>
+</html>

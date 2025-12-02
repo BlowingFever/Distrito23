@@ -1,0 +1,241 @@
+/* ===== RESET Y ESTILOS GLOBALES ===== */
+@import url('header.css');
+@import url('footer.css');
+@import url('resources.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Fuentes */
+@font-face {
+    font-family: 'Fira Code';
+    src: url('/public/assets/fonts/FiraCode/FiraCode-VariableFont_wght.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bebas Neue';
+    src: url('/public/assets/fonts/BebasNeue/BebasNeue-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('/public/assets/fonts/Inter/Inter-VariableFont_opsz\,wght.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Marriweather';
+    src: url('/public/assets/fonts/Merriweather/Merriweather-VariableFont_opsz\,wdth\,wght.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+:root {
+    /*Estilos header*/
+    --color-header-bg: #ced4da;
+    --color-header-login:#ffffff;
+    --color-back-links:rgba(0, 0, 0, 0.507);
+    --color-hover-header: #000000;
+    /*Estilos main*/
+    --color-bg: #ffffff;
+    --color-languages: #ced4da;
+    --color-caracteristicas: #e9ecef;
+    --img-background-main: url('/public/assets/img/fondos/Clouds-lightmode.png');
+    --gradient-op: linear-gradient(135deg, #b4b2b2 0%, #7ab195 100%);
+    /*Estilos footer*/
+    --color-border: rgba(87, 80, 80, 0.08);
+    --color-footer-bg: #F2F2F2;
+    --text-footer: #737579;
+    --color-links-footer: #000000;
+    --footer-link-hover: #000000;
+    
+    /*Estilos generales*/
+    --color-tittle:#000000;
+    --color-text: #000000;
+    --color-efecto: #070707;
+    --text-shadow: 0 2px 4px rgba(168, 166, 166, 0.952);
+    --color-hover: rgba(0, 0, 0, 0.541);
+    --img-filter: none;
+
+     /*Estilos para cursos*/
+    --img-background-curso: url('/public/assets/cursos/python/course-python-background.jpg');
+    --color-borders:#000000;
+    --color-hovers:#5b5a5a;
+    --color-subapartado:#dcdcdc;
+    --color-buttons:#ffffff;
+    --color-bars:#555454;
+    --progress-fill:linear-gradient(90deg, #ffffffa0 0%, #00000052 100%);
+
+    /* Espaciado */
+    --spacing-xs: 8px;
+    --spacing-sm: 16px;
+    --spacing-md: 24px;
+    --spacing-lg: 32px;
+    --spacing-xl: 48px;
+    --spacing-2xl: 64px;
+    --spacing-3xl: 96px;
+    
+    /* Tipografía */
+    --font-sans: 'Inter', serif;
+    --font-mono: 'Fira Code', monospace;
+    --font-display: 'Bebas Neue', sans-serif;
+    --font-condensed: 'Merriweather', serif;
+    --font-size-xs: 13px;
+    --font-size-sm: 14px;
+    --font-size-base: 15px;
+    --font-size-lg: 18px;
+    --font-size-xl: 24px;
+    --font-size-2xl: 32px;
+    --font-size-3xl: 48px;
+    
+    /* Bordes */
+    --radius-sm: 6px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-xl: 16px;
+    
+    /* Sombras */
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07);
+    --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] {
+    /*ModoOscuro*/
+    /*Estilos header*/
+    --color-header-bg: #303030;
+    --color-header-login:#ffffff;
+    --color-back-links:rgba(0, 0, 0, 0.507);
+    --color-hover-header: #ffffff;
+    /*Estilos main*/
+    --color-bg: #000000;
+    --color-languages: #232323;
+    --color-caracteristicas: #454647;
+    --img-background-main: url('/public/assets/img/fondos/Clouds-darkmode.png');
+    --gradient-op: linear-gradient(135deg, #ffffff7c 0%, #00000063 100%);
+    /*Estilos footer*/
+    --color-border: rgba(87, 80, 80, 0.08);
+    --color-footer-bg: #303030;
+    --text-footer: #a8a9ac;
+    --color-links-footer: #ffffff;
+    --footer-link-hover: #000000;
+    
+    /*Estilos generales*/
+    --color-tittle:#ffffff;
+    --color-text: #ffffff;
+    --color-efecto: #070707;
+    --text-shadow: 0 2px 4px rgba(168, 166, 166, 0.952);
+    --color-hover: rgba(0, 0, 0, 0.541);
+    --img-filter: none; 
+
+    /*Estilos para cursos*/
+    --img-background-curso: url('/public/assets/cursos/python/curse-python-darkmode.png');
+    --color-borders:#8c8c8c;
+    --color-hovers:#5b5a5a;
+    --color-subapartado:#000000;
+    --color-buttons:#ffffff;
+    --color-bars:#555454;
+    --progress-fill:linear-gradient(90deg, #ffffffa0 0%, #00000052 100%);
+}
+
+body {
+    font-family: var(--font-sans);
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+}
+
+.div-body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    padding-top: 80px; 
+}
+
+/* Estilos de botones globales */
+button {
+    font-family: var(--font-sans);
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.2s ease;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Utilidades */
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #cbd5e0;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a0aec0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    :root {
+        --font-size-3xl: 36px;
+        --font-size-2xl: 28px;
+        --spacing-3xl: 64px;
+        --spacing-2xl: 48px;
+    }
+    
+    main {
+        padding-top: 70px;
+    }
+}

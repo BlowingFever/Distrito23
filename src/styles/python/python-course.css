@@ -1,0 +1,562 @@
+/* ===== PYTHON COURSE PAGE ===== */
+
+/* Hero Section - Python Course */
+.curso-python {
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--img-background-curso);
+    padding: var(--spacing-3xl) var(--spacing-md);
+    position: relative;
+    overflow: hidden;
+}
+
+.curso-python::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+}
+
+.div-curso-python {
+    text-align: center;
+    max-width: 800px;
+    position: relative;
+    z-index: 1;
+}
+
+.course-badge {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: var(--spacing-md);
+    justify-content: center;
+}
+
+.badge-level,
+.badge-type {
+    background: rgba(0, 0, 0, 0.63);
+    backdrop-filter: blur(10px);
+    padding: 0.4rem 0.9rem;
+    border-radius: var(--radius-sm);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.322);
+}
+
+.div-curso-python h2 {
+    font-size: var(--font-size-3xl);
+    font-weight: 800;
+    color: white;
+    margin-bottom: var(--spacing-md);
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.411);
+    font-family: var(--font-mono);
+}
+
+.div-curso-python p {
+    font-size: var(--font-size-lg);
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.661);
+    margin-bottom: var(--spacing-lg);
+    line-height: 1.6;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: var(--font-display);
+    font-weight: bold;
+}
+
+.start-python-course {
+    padding: 14px 32px;
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-size: var(--font-size-base);
+    font-weight: 700;
+    border-radius: var(--radius-md);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(255, 193, 7, 0.3);
+    font-family: var(--font-mono);
+}
+
+.start-python-course:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.315);
+}
+
+/* Python World Section */
+.python-world {
+    background: var(--color-bg);
+    padding: var(--spacing-3xl) var(--spacing-md);
+    min-height: 100vh;
+}
+
+.div-python-world {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    gap: var(--spacing-xl);
+    align-items: start;
+}
+
+/* Python Modules Section */
+.python-modules {
+    grid-column: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.module-card {
+    background: var(--color-languages);
+    border: 1px solid black;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.module-card:hover {
+    border-color: var(--color-borders);
+}
+
+.module-header {
+    padding: var(--spacing-md);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    cursor: pointer;
+    border-left: 3px solid var(--color-borders);
+    transition: background 0.2s ease;
+}
+
+.module-header:hover {
+    background: var(--color-hovers);
+}
+
+.module-number {
+    width: 40px;
+    height: 40px;
+    background: var(--color-borders);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: var(--color-languages);
+    border: 2px solid #000000;
+    font-size: var(--font-size-base);
+    flex-shrink: 0;
+}
+
+.module-title {
+    flex: 1;
+    font-size: var(--font-size-xl);
+    font-weight: 600;
+    color: var(--color-text);
+    margin: 0;
+}
+
+
+
+.toggle-btn {
+    background: none;
+    border: none;
+    color: var(--color-text);
+    font-size: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    padding: var(--spacing-xs);
+}
+
+.module-card.expanded .toggle-btn {
+    transform: rotate(180deg);
+}
+
+.module-content {
+    padding: 0 var(--spacing-md) var(--spacing-md);
+    display: none;
+    animation: slideDown 0.3s ease;
+}
+
+.module-card.expanded .module-content {
+    display: block;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.module-description {
+    color: var(--color-text);
+    margin-bottom: var(--spacing-md);
+    font-size: var(--font-size-base);
+    line-height: 1.6;
+}
+
+/* Python Levels / Exercises */
+.python-levels {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.exercise-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-md);
+    background: var(--color-subapartado);
+    border-radius: var(--radius-md);
+    border: 1px solid #000000;
+    transition: all 0.3s ease;
+}
+
+.exercise-item:hover {
+    background: var(--color-hovers);
+    border-color: rgb(0, 0, 0);
+}
+
+.exercise-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.exercise-label {
+    color: var(--color-text);
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.exercise-name {
+    font-weight: 600;
+    font-size: var(--font-size-base);
+    color: var(--color-tittle);
+}
+
+.exercise-btn {
+    padding: 10px 24px;
+    border-radius: var(--radius-sm);
+    border: none;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 80px;
+}
+
+.exercise-btn.start {
+    background: var(--color-borders);
+    color: var(--color-buttons);
+}
+
+.exercise-btn.start:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px var(--color-bg);
+}
+
+.exercise-btn.locked {
+    background: var(--color-borders);
+    color: var(--color-buttons);
+    border: 1px solid #000000;
+    cursor: not-allowed;
+}
+
+/* Sidebar */
+.python-sidebar {
+    display: flex;
+    flex-direction: column;
+    grid-column: 2;
+    gap: var(--spacing-md);
+    position: sticky;
+    top: 100px;
+    height: fit-content;
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+}
+
+.profile-card,
+.progress-card,
+.badges-card,
+.cheat-sheets-card {
+    background: var(--color-languages);
+    border: 1px solid #000000;
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-md);
+}
+
+/* Profile Card */
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-sm);
+}
+
+.profile-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid var(--color-borders);
+    object-fit: cover;
+}
+
+.profile-avatar-animated {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+}
+
+.profile-avatar-animated:hover {
+    transform: scale(1.05);
+    border-color: var(--color-bg);
+    box-shadow: 0 0 15px var(--color-hovers);
+}
+
+.profile-avatar-animated:active {
+    transform: scale(0.95);
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-name {
+    font-weight: 600;
+    color: var(--color-text);
+    font-size: var(--font-size-base);
+    margin: 0;
+}
+
+.profile-level {
+    color: #8b92a7;
+    font-size: 14px;
+}
+
+.profile-btn {
+    width: 100%;
+    background: var(--color-borders);
+    border: 1px solid #2a3550;
+    color: white;
+    padding: 12px;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: not-allowed;
+}
+
+/* Progress Card */
+.card-title {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-md);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--color-tittle);
+}
+
+.badge-count {
+    color: var(--color-borders);
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.progress-item {
+    margin-bottom: var(--spacing-md);
+}
+
+.progress-item:last-child {
+    margin-bottom: 0;
+}
+
+.progress-label {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--spacing-xs);
+    font-size: 14px;
+    color: var(--color-text);
+}
+
+.progress-count {
+    color: var(--color-borders);
+    font-weight: 600;
+}
+
+.progress-bar {
+    background: var(--color-bars);
+    height: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    transition: width 0.5s ease;
+    border-radius: 4px;
+}
+
+.progress-fill.blue {
+    background: var(--progress-fill);
+}
+
+.progress-fill.green {
+    background: var(--progress-fill);
+}
+
+.progress-fill.yellow {
+    background: var(--progress-fill);
+}
+
+/* Badges Card */
+.badges-description {
+    color: var(--color-text);
+    font-size: 14px;
+    margin-bottom: var(--spacing-md);
+    line-height: 1.5;
+}
+
+.badges-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.badge-item {
+    aspect-ratio: 1;
+    background: var(--color-bg);
+    border: 2px solid var(--color-borders);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.badge-item.locked {
+    opacity: 0.4;
+}
+
+.badge-item:not(.locked):hover {
+    transform: scale(1.05);
+    border-color: var(--color-hovers);
+}
+
+/*
+.python-sidebar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.python-sidebar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.python-sidebar::-webkit-scrollbar-thumb {
+    background: #2a3550;
+    border-radius: 3px;
+}
+
+.python-sidebar::-webkit-scrollbar-thumb:hover {
+    background: #4d9fff;
+}
+*/
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+    .div-python-world {
+        grid-template-columns: 1fr;
+    }
+
+    .python-sidebar {
+        position: static;
+        grid-row: 1;
+        grid-column: 1;
+        max-height: none;
+        overflow-y: visible;
+    }
+    .python-modules {
+        grid-column: 1;
+        grid-row: 2;
+    }
+}
+
+@media (max-width: 768px) {
+    .curso-python {
+        min-height: 350px;
+        padding: var(--spacing-2xl) var(--spacing-sm);
+    }
+
+    .div-curso-python h2 {
+        font-size: var(--font-size-2xl);
+    }
+
+    .div-curso-python p {
+        font-size: var(--font-size-base);
+    }
+
+    .python-world {
+        padding: var(--spacing-2xl) var(--spacing-sm);
+    }
+
+    .module-header {
+        padding: var(--spacing-sm);
+    }
+
+    .module-title {
+        font-size: var(--font-size-lg);
+    }
+
+    .exercise-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--spacing-sm);
+    }
+
+    .exercise-btn {
+        width: 100%;
+    }
+
+    .badges-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .course-badge {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .div-python-world {
+        gap: var(--spacing-md);
+    }
+
+    .module-number {
+        width: 36px;
+        height: 36px;
+        font-size: 14px;
+    }
+}

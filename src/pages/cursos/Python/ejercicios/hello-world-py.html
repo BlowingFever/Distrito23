@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/src/styles/python/terminal-py.css">
+        <link rel="icon" href="/public/assets/img/logo/favicon.ico" type="image/x-icon">
+        <title>Hello World - Python Exercise</title>
+    </head>
+    <body>
+        <div class="exercise-container">
+            <!-- Header -->
+            <div class="exercise-header">
+                <div class="breadcrumb">
+                    <a href="/src/pages/cursos/Python/python.html">&larr; Volver al curso de python</a>
+                    <span>/</span>
+                    <span>Hello World</span>
+                </div>
+                <h1 class="exercise-title">Ejercicio 1: Hello World</h1>
+                <div class="exercise-meta">
+                    <span class="meta-badge">Modulo 1</span>
+                    <span class="meta-badge">Principiante</span>
+                    <span class="meta-badge">5 XP</span>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="exercise-content">
+                <!-- Instructions Panel -->
+                <div class="instruction-panel">
+                    <h2 class="panel-header">&lt;/&gt; Instrucciones</h2>
+                    <div class="instruction-text">
+                        <p><strong>Bienvenido a tu primer ejercicio en python!</strong></p>
+                        <p>En este ejercicio, aprenderás a usar la función <code>print()</code> para mostrar texto en la pantalla.</p>
+                        <p><strong>Tu tarea:</strong></p>
+                        <p>Escribe un programa en Python que imprima el texto <code>Hello World</code> en la consola.</p>
+
+                        <div class="example-box">
+                            <div class="example-title">Salida Esperada:</div>
+                            <div class="example-code">Hello World</div>
+                        </div>
+
+                        <p><strong>💡 Pista:</strong></p>
+                        <p>Usa la función <code>print()</code> con el texto dentro de comillas.</p>
+                    </div>
+                </div>
+
+                <!-- Editor Panel -->
+                <div class="editor-panel">
+                    <h2 class="panel-header">💻 Editor de código</h2>
+                    
+                    <!-- Code Editor -->
+                    <div class="code-editor">
+                        <div class="editor-toolbar">
+                            <span class="editor-title">main.py</span>
+                        </div>
+                        <div style="overflow: hidden;">
+                            <div class="line-numbers" id="lineNumbers">0</div>
+                            <textarea class="code-input" id="codeInput" placeholder="# Escribe tu código en Python aquí... print('Hello World')" spellcheck="false"></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Output Console -->
+                    <div class="output-console">
+                        <div class="console-header">
+                            <span class="console-title">Salida</span>
+                            <button class="clear-btn" onclick="clearConsole()">Borrar</button>
+                        </div>
+                        <div class="console-content" id="consoleOutput">
+                            <div class="empty-console">Dale a Run Code para ver como se vería tu código...</div>
+                        </div>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="action-buttons">
+                        <button class="btn btn-run" onclick="runCode()">
+                            ▶ Run Code
+                        </button>
+                        <button class="btn btn-check" onclick="checkSolution()">
+                            ✓ Check Solution
+                        </button>
+                        <button class="btn btn-hint" onclick="showHint()">
+                            💡 Hint
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Result Modal -->
+        <div class="result-modal" id="resultModal">
+            <div class="modal-content" id="modalContent">
+                <div class="modal-icon" id="modalIcon">🎉</div>
+                <h2 class="modal-title" id="modalTitle">Success!</h2>
+                <p class="modal-message" id="modalMessage">Great job! Your code is correct!</p>
+                <div class="modal-buttons">
+                    <button class="btn-modal btn-close" onclick="closeModal()">Close</button>
+                    <button class="btn-modal btn-next" onclick="nextExercise()">No hay más por ahora rey →</button>
+                </div>
+            </div>
+        </div>
+        <script src="/src/js/py-excercyse.js"></script>
+    </body>
+</html>

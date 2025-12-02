@@ -1,0 +1,331 @@
+/* Reset y estilos base del header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: var(--color-header-bg);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--color-border);
+    z-index: 1000;
+    padding: 0;
+    font-family: var(--font-mono);
+}
+
+nav {
+    width: 100%;
+    padding: px;
+}
+
+.nav-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+}
+
+/* Sección izquierda */
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+}
+
+/* Logo y nombre */
+.logo {
+    height: 50px;
+    width: auto;
+    display: block;
+}
+
+.nav-left > p {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--color-tittle);
+    margin: 0;
+    white-space: nowrap;
+}
+
+/* Links de navegación */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap:15px;
+    list-style: none;
+    margin: 0;
+    margin-left: 10px;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0;
+    position: relative;
+}
+
+.nav-links a {
+    display: block;
+    padding: 8px 16px;
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 8px;
+    transition: all 0.5s ease;
+}
+
+.nav-links a:hover {
+    color: var(--color-hover-header);
+    background: var(--color-back-links);
+}
+
+/* Sección derecha */
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Botón de búsqueda */
+.search-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 8px;
+    color: var(--color-text);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+/* ===== BOTÓN DE TEMA ===== */
+.theme-toggle {
+    background: transparent;
+    border: 2px solid var(--border-color);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+    border-color: var(--text-primary);
+}
+
+.theme-toggle svg {
+    width: 20px;
+    height: 20px;
+    color: var(--text-primary);
+    position: absolute;
+    transition: all 0.3s ease;
+}
+
+/* Iconos de sol y luna */
+.sun-icon {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+}
+
+.moon-icon {
+    opacity: 0;
+    transform: rotate(-90deg) scale(0);
+}
+
+[data-theme="dark"] .sun-icon {
+    opacity: 0;
+    transform: rotate(90deg) scale(0);
+}
+
+[data-theme="dark"] .moon-icon {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+    color: rgb(255, 255, 255);
+}
+
+.search-btn:hover {
+    background: var(--color-back-links);
+    border-color: rgba(0, 0, 0, 0.2);
+}
+
+.search-icon {
+    width: 16px;
+    height: 16px;
+    background: url('/Distrito23/public/assets/img/buscador.png') center/contain no-repeat;
+}
+
+/* Botón de login */
+.login-btn {
+    padding: 8px 20px;
+    background: #1a1a1a;
+    color: var(--color-header-login);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.login-btn:hover {
+    background: var(--color-hover);
+    transform: translateY(-1px);
+}
+
+/* Menú desplegable oculto por defecto */
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--color-header-bg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    min-width: 220px;
+    padding: var(--spacing-xs) 0;
+    margin-top: 8px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-lg);
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+/* Mostrar dropdown al hacer hover */
+.nav-links li:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Items del menú desplegable */
+.dropdown-menu li {
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 12px 20px;
+    color: var(--color-text);
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    border-radius: 0;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.dropdown-menu a:hover {
+    background: var(--color-back-links);
+    color: var(--color-hover-header);
+    padding-left: 24px;
+}
+
+/* Indicador visual de que hay un menú */
+.nav-links > li > a.has-dropdown::after {
+    content: '▼';
+    font-size: 10px;
+    margin-left: 6px;
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+.nav-links > li:hover > a.has-dropdown::after {
+    transform: rotate(180deg);
+}
+
+/* Separadores opcionales en el dropdown */
+.dropdown-menu .dropdown-separator {
+    height: 1px;
+    background: var(--color-border);
+    margin: var(--spacing-xs) var(--spacing-sm);
+}
+
+/* Encabezados de sección en dropdown */
+.dropdown-menu .dropdown-header {
+    padding: 8px 20px;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--color-text);
+    opacity: 0.6;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    pointer-events: none;
+}
+
+/* Responsive - Mobile */
+@media (max-width: 768px) {
+    .dropdown-menu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        margin-top: 0;
+        border: none;
+        box-shadow: none;
+        padding-left: var(--spacing-md);
+        display: none;
+    }
+    
+    .nav-links li.dropdown-active .dropdown-menu {
+        display: block;
+    }
+    
+    .nav-links > li > a.has-dropdown::after {
+        content: '▶';
+    }
+    
+    .nav-links li.dropdown-active > a.has-dropdown::after {
+        transform: rotate(90deg);
+    }
+}
+
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .nav-links {
+        gap: 4px;
+    }
+    
+    .nav-links a {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-container {
+        padding: 12px 16px;
+    }
+    
+    .nav-left {
+        gap: 16px;
+    }
+    
+    .nav-links {
+        display: none; /* Considera agregar un menú hamburguesa para móvil */
+    }
+    
+    .search-btn span {
+        display: none;
+    }
+    
+    .login-btn {
+        font-size: 13px;
+        padding: 8px 16px;
+    }
+}

@@ -1,6 +1,3 @@
-/* ===== PYTHON COURSE PAGE ===== */
-
-/* Hero Section - Python Course */
 .curso-python {
     min-height: 400px;
     display: flex;
@@ -56,9 +53,9 @@
     color: white;
     margin-bottom: var(--spacing-md);
     line-height: 1.2;
-    letter-spacing: -0.02em;
+    letter-spacing: 0.05em;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.411);
-    font-family: var(--font-mono);
+    font-family: var(--font-display);
 }
 
 .div-curso-python p {
@@ -559,5 +556,4 @@
         height: 36px;
         font-size: 14px;
     }
-
 }

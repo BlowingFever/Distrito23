@@ -24,7 +24,7 @@ if (!$nombre || !$email || !$asunto || !$mensaje) {
 }
 
 // Preparar y enviar
-$destinatario = "tuemail@gmail.com"; // ← pon aquí tu email
+$destinatario = "moisescuartero@gmail.com";
 $asunto_mail  = "Distrito23 | Contacto: $asunto";
 $cuerpo       = "Has recibido un nuevo mensaje desde Distrito 23.\n\n";
 $cuerpo      .= "Nombre:  $nombre\n";

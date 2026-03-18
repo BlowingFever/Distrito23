@@ -274,3 +274,190 @@
         font-size: var(--font-size-xl);
     }
 }
+
+/* ===== SECCIÓN CONTACTO ===== */
+/* Añade esto al final de tu main.css */
+
+.contacto {
+    padding: var(--spacing-3xl) var(--spacing-md);
+    background: var(--color-bg);
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.contacto h1 {
+    text-align: center;
+    font-size: var(--font-size-3xl);
+    font-weight: 800;
+    color: var(--color-tittle);
+    text-shadow: var(--text-shadow);
+    margin-bottom: var(--spacing-2xl);
+}
+
+.contacto-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: var(--spacing-xl);
+    align-items: start;
+}
+
+/* ── Tarjeta de información ── */
+.contacto-info {
+    background: var(--color-caracteristicas);
+    border-radius: var(--radius-xl);
+    padding: var(--spacing-xl);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+    box-shadow: var(--shadow-sm);
+}
+
+.contacto-info-item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.contacto-icon {
+    width: 48px;
+    height: 48px;
+    background: var(--gradient-op);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.contacto-icon svg {
+    width: 22px;
+    height: 22px;
+    stroke: white;
+}
+
+.contacto-info-item h3 {
+    font-size: var(--font-size-base);
+    font-weight: 700;
+    color: var(--color-tittle);
+    margin: 0 0 2px 0;
+}
+
+.contacto-info-item p {
+    font-size: var(--font-size-sm);
+    color: var(--color-text);
+    opacity: 0.75;
+    margin: 0;
+}
+
+/* ── Tarjeta del formulario ── */
+.contacto-form-card {
+    background: var(--color-caracteristicas);
+    border-radius: var(--radius-xl);
+    padding: var(--spacing-xl);
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.form-group-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-group-contacto label {
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    color: var(--color-tittle);
+}
+
+.form-group-contacto input,
+.form-group-contacto textarea {
+    padding: 12px 16px;
+    font-size: var(--font-size-base);
+    font-family: var(--font-sans);
+    color: var(--color-text);
+    background: var(--color-bg);
+    border: 2px solid transparent;
+    border-radius: var(--radius-md);
+    transition: all 0.3s ease;
+    outline: none;
+    resize: vertical;
+}
+
+.form-group-contacto input::placeholder,
+.form-group-contacto textarea::placeholder {
+    color: var(--color-text);
+    opacity: 0.4;
+}
+
+.form-group-contacto input:focus,
+.form-group-contacto textarea:focus {
+    border-color: var(--color-efecto);
+    box-shadow: 0 0 0 3px rgba(7, 7, 7, 0.08);
+}
+
+/* Botón enviar */
+.contacto-btn {
+    padding: 14px 32px;
+    background: var(--gradient-op);
+    color: white;
+    font-size: var(--font-size-base);
+    font-weight: 700;
+    border: none;
+    border-radius: var(--radius-lg);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: var(--spacing-xs);
+    align-self: flex-start;
+}
+
+.contacto-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.contacto-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Mensajes de estado */
+.contacto-mensaje {
+    padding: 12px 16px;
+    border-radius: var(--radius-md);
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    animation: fadeInMsg 0.3s ease;
+}
+
+@keyframes fadeInMsg {
+    from { opacity: 0; transform: translateY(-8px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.contacto-ok {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.contacto-error {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+    .contacto-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contacto-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
